@@ -1,0 +1,99 @@
+:root {
+    --ASH-flx-card-margin: 30px;
+    --ASH-flx-card-padding: 20px;
+    --ASH-flx-card-text-padding: 10px;
+    --ASH-flx-card-enve-height: 100px;
+    --ASH-flx-card-awsome-size: 60px;
+    --ASH-flx-card-default-color: #555;
+}
+
+
+/* card container */
+.ASH-flx-card{
+    display: flex;
+    margin-bottom: var(--ASH-flx-card-margin);
+    flex-direction: column;
+    position: relative;
+}
+.ASH-flx-card-padding{
+    display: flex;
+    margin-bottom: var(--ASH-flx-card-margin);
+    flex-direction: column;
+    position: relative;
+    padding: var(--ASH-flx-card-padding);
+}
+
+/* center all content horizentaly and verticaly */
+.ASH-flx-card.ASH-flx-center {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.ASH-flx-card.ASH-flx-center-h {
+    justify-content: center;
+}
+.ASH-flx-card.ASH-flx-center-v {
+    align-items: center;
+    align-content: center;
+}
+
+/* card child */
+/* image */
+.ASH-flx-card .ASH-flx-card-img ,
+.ASH-flx-card .ASH-flx-card-img img {
+    display: block;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+/* add envelope to img or container */
+.ASH-flx-card .ASH-flx-card-img-enve-l,
+.ASH-flx-card .ASH-flx-card-img-enve-r {
+    display: block;
+    position: relative;
+}
+.ASH-flx-card .ASH-flx-card-img-enve-r::after,
+.ASH-flx-card .ASH-flx-card-img-enve-l::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    height: calc(100% + var(--ASH-flx-card-enve-height));
+    top: calc(var(--ASH-flx-card-enve-height) / 2);
+    background-color: var(--ASH-flx-card-default-color);
+    z-index: -1;
+}
+.ASH-flx-card .ASH-flx-card-img-enve-r::after {
+    right: -25%;
+}
+.ASH-flx-card .ASH-flx-card-img-enve-l::after {
+    left: -25%;
+}
+
+/* text section */
+.ASH-flx-card .ASH-flx-card-text {
+    flex-basis: auto;
+    padding-left: var(--ASH-flx-card-text-padding);
+    padding-right: var(--ASH-flx-card-text-padding);
+    color: var(--ASH-flx-card-default-color);
+}
+
+
+/* add chane from row to coloumn */
+@media (min-width:768px) {
+    .ASH-flx-card.ASH-flx-changeable {
+        flex-direction: row;
+        text-align: start;
+    }
+    .ASH-flx-card.ASH-flx-changeable .ASH-flx-card-text > :first-child,
+    .ASH-flx-card.ASH-flx-changeable .ASH-flx-card-text {
+        margin-top: 0;
+    }
+}
+
+/* icon */
+.ASH-flx-card .ASH-flx-card-icon {
+    flex-basis: var(--ASH-flx-card-awsome-size);
+    color: var(--ASH-flx-card-default-color);
+}
+
+

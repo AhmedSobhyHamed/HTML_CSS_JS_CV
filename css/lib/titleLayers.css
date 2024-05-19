@@ -1,0 +1,38 @@
+:root {
+    --ASH-title-back-default-text-color:#ebeced;
+    --ASH-title-front-default-text-color:#555;
+    /* minimum 60px */
+    --ASH-title-back-size-mob: 50px;
+    --ASH-title-back-size-scrn: 100px;
+    --ASH-title-letter-compress: -3px;
+    --ASH-title-front-size:20px;
+}
+.ASH-layer-title{
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-bottom: 60px;
+}
+.ASH-layer-title .ASH-back-title {
+    color: var(--ASH-title-back-default-text-color);
+    font-size: var(--ASH-title-back-size-mob);
+    letter-spacing: var(--ASH-title-letter-compress);
+    font-weight: 800;
+    margin: 0;
+}
+
+.ASH-layer-title .ASH-front-title {
+    color: var(--ASH-title-front-default-text-color);
+    transform: translateY(calc(-30px - 1 * ((var(--ASH-title-back-size-mob) - 40px) * 2 / 10)));
+    font-size: var(--ASH-title-front-size);
+    margin: 0;
+}
+@media (min-width:768px) {
+    .ASH-layer-title .ASH-back-title {
+        font-size: var(--ASH-title-back-size-scrn);
+    }
+    
+    .ASH-layer-title .ASH-front-title {
+        transform: translateY(calc(-30px - 1 * ((var(--ASH-title-back-size-scrn) - 40px) * 2 / 10)));
+    }
+}
