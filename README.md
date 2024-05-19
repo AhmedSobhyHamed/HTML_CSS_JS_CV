@@ -126,11 +126,11 @@ This project is front-end project using HTML, CSS and JavaScript to create a res
 ## Usage
 
 **You can interact with the project via this link**
-[web page on github](https://ahmedsobhyhamed.github.io/ HTML_CSS_JS_CV/).
+[web page on github](https://ahmedsobhyhamed.github.io/HTML_CSS_JS_CV/).
 <br>
-**[see an example for user interaction.[video]](http://youtube.com)**
+**[see an example for user interaction.[video]](https://youtube.com)**
 <br>
-**[demonstration video for developer communit](https://www.youtube.com/watch?v=QrMDQQKTNyU)**
+**[demonstration video for developer communit](https://www.youtube.com)**
 
 ## Technologies Used
 
